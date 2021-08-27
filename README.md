@@ -267,17 +267,17 @@ testParser()
 
 ### Properties
 ```ts
-statusCode: number;
-name: string;
-rating: string;
-totalVotes: string;
-rank: string;
-montlyViews: string;
-status: string;
-releaseYear: string;
-genres: string[];
-url: string;
-img: string;
+const statusCode: number;
+const name: string;
+const rating: string;
+const totalVotes: string;
+const rank: string;
+const montlyViews: string;
+const status: string;
+const releaseYear: string;
+const genres: string[];
+const url: string;
+const img: string;
 ```
 
 ### Methods 
