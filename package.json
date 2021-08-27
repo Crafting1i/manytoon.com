@@ -2,11 +2,8 @@
   "name": "manytoon.com",
   "version": "1.0.0",
   "description": "Simply parser for manytoon.com",
-  "homepage": "",
+  "homepage": "https://github.com/Crafting1i/manytoon.com",
   "main": "src/index.js",
-  "scripts": {
-    "checkjs": "tsc"
-  },
   "keywords": [
     "hentai", "parse", "parser",
     "manytoon", "manytoon.com", "api",
