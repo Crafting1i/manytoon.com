@@ -46,16 +46,17 @@ testParser()
 
 ## **Parser**
 ### constructor()
-> | Parameter | Type   | Description | Requred |
+> | Parameter | Type   | Description | Required |
 > | --------- | ------ | ----------- | ------- |
 > | None      | any    | None        | false   |
 
 ### Methods
 > #### **\.getDoujin(url)**
 > Getting a doujin from manytoon.com URL
-> | Parameter | Type                                                                                              | Description              | Requred |
-> | --------- | ------------------------------------------------------------------------------------------------- | ------------------------ | ------- |
-> | url       | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | URL for getting a doujin | true    |
+> | Parameter | Type                                                                                              | Description              | Required |
+> | --------- | ------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
+> | url       | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | URL for getting a doujin | true     |
+>
 > Example: 
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -73,9 +74,10 @@ testParser()
 > #### **\.getHomepage()**
 > Get the homepage
 > 
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+>
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -93,9 +95,10 @@ testParser()
 > ### **\.getPopularUpdates()**
 > Get the latest popular updates
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+>
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -116,6 +119,7 @@ testParser()
 > | Parameter | Type                                                                                              | Description        | Required |
 > | --------- | ------------------------------------------------------------------------------------------------- | ------------------ | -------- |
 > | target    | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | Name for searching | true     |
+>
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -150,6 +154,7 @@ testParser()
 > | Parameter        | Type                                                                                                                 | Description               | Required |
 > | ---------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------- | -------- | 
 > | page             | [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)                    | Page number               | true     |
+>
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -164,12 +169,13 @@ testParser()
 >
 > *Returns: [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[Page](##page)\<[Doujin](##doujin)\>>*
 
-> ### **\.next()**
+> #### **\.next()**
 > Returns the next page
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+>
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -184,12 +190,13 @@ testParser()
 >
 > *Returns: [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[Page](##page)\<[Doujin](##doujin)\>>*
 
-> ### **\.prev()**
+> #### **\.prev()**
 > Returns the previous page
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+>
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -205,12 +212,13 @@ testParser()
 >
 > *Returns: [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[Page](##page)\<[Doujin](##doujin)\>>*
 
-> ### **\.getCurrentPageNumber()**
+> #### **\.getCurrentPageNumber()**
 > Returns the current page
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+>
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -226,12 +234,13 @@ testParser()
 >
 > *Returns: [number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)*
 
-> ### **\.getLastPageNumber()**
+> #### **\.getLastPageNumber()**
 > Returns the current page
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+> 
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -250,7 +259,7 @@ testParser()
 
 ## **Doujin**
 ### constructor(html, url, statusCode)
-> | Parameter  | Type                                                                                              | Description | Requred |
+> | Parameter  | Type                                                                                              | Description | Required |
 > | ---------- | ------------------------------------------------------------------------------------------------- | ----------- | ------- |
 > | html       | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | None        | true    |
 > | url        | [string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | None        | true    |
@@ -275,9 +284,10 @@ img: string;
 > #### **\.getAllChapters()**
 > Returns all chapters
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+> 
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -295,9 +305,10 @@ img: string;
 > #### **\.getLastChapter()**
 > Getting a last chapter
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+> 
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
@@ -315,9 +326,10 @@ img: string;
 > #### **\.getFirstChapter()**
 > Getting a last chapter
 >
-> | Parameter | Type   | Description | Requred |
-> | --------- | ------ | ----------- | ------- |
-> | None      | any    | None        | false   |
+> | Parameter | Type   | Description | Required |
+> | --------- | ------ | ----------- | -------- |
+> | None      | any    | None        | false    |
+> 
 > Example:
 > ```js
 > const Manytoon = require('manytoon.com')
