@@ -1,0 +1,28 @@
+{
+  "name": "manytoon.com",
+  "version": "1.0.0",
+  "description": "Simply parser for manytoon.com",
+  "homepage": "",
+  "main": "src/index.js",
+  "scripts": {
+    "checkjs": "tsc"
+  },
+  "keywords": [
+    "hentai", "parse", "parser",
+    "manytoon", "manytoon.com", "api",
+    "doujin",  "doujins", "manga",
+    "ero", "erotic", "wrapper"
+  ],
+  "author": "Craftig1i",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "node-fetch": "^2.6.1",
+    "qs": "^6.10.1"
+  },
+  "typings": "typings",
+  "devDependencies": {
+    "@types/node": "^16.7.1",
+    "typescript": "^4.3.5"
+  }
+}
