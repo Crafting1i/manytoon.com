@@ -1,5 +1,4 @@
-// @ts-check
-const manytoon = require('manytoon.com')
+const manytoon = require('../src')
 
 async function init() {
     let params = [...process.argv]

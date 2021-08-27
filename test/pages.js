@@ -1,4 +1,4 @@
-const manytoon = require('manytoon.com')
+const manytoon = require('../src')
 
 const parser = new manytoon.Parser()
 
