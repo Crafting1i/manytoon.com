@@ -2,22 +2,19 @@
 const Page = require('./Page')
 const Doujin = require('./Doujin')
 
-
 const cheerio = require('cheerio')
 const utils = new (require('./utils'))()
 
-
-
 class Parser {
 	constructor() {
-		this.baseURL = 'https://manytoon.com/'
-  }
+		this.baseURL = 'https://manytoon.com'
+    }
     /**
      * **Get doujins from given page**
      * @return {Promise<Page>}
      */
     async getHomepage() {
-        const { html } = await utils.getPage(this.baseURL + 'page/1')
+        const { html } = await utils.getPage(this.baseURL + '/page/1')
         const $ = cheerio.load(html)
 
         const _content = $('div.page-listing-item div.item-thumb a')
@@ -39,11 +36,13 @@ class Parser {
         if (typeof target !== 'string') throw new TypeError("url must be a string.")
 
         const name = encodeURI(target.split(/ +/g).join('+'))
-        const { html } = await utils.getPage(this.baseURL + `?s=${name}&post_type=wp-manga`)
+        
+        const { html } = await utils.getPage(this.baseURL + `/?s=${name}&post_type=wp-manga`)
         const $ = cheerio.load(html)
         const _content = $('div[role="tabpanel"].c-tabs-item > .c-tabs-item__content .tab-summary > .post-title a')
-        let lastPage = $('div.wp-pagenavi[role="navigation"] > a.last').attr('href')
-        lastPage = +lastPage.split('/')[lastPage.split('/').length - 1] || +lastPage.split('/')[lastPage.split('/').length - 2]
+        
+        const urlComponents = $('div.wp-pagenavi[role="navigation"] > a.last').attr('href').split('/')
+        const lastPage = +urlComponents[urlComponents.length - 1] || +urlComponents[urlComponents.length - 2]
 
         const doujins = await utils.parseAllURLsFromElements(_content)
         const page = new Page({ isHome: false, doujins, lastPage, target: name })

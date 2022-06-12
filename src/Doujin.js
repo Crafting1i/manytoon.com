@@ -68,6 +68,9 @@ class Doujin {
             this.genres = []
             
             this.url = ''
+            /**
+             * **Irrelevant now** | **Unrecomended to use**
+             */
             this.img = ''
         } else {
             this.name = name
@@ -131,11 +134,13 @@ class Doujin {
         
         
         const chaptersMethods = {
-            first: () => $('.listing-chapters_wrap .wp-manga-chapter').eq(-1)[0].children[1]/*Getting 'a' tag*/.attribs.href, //First chapter
-            last: () => {
-                return $(`.listing-chapters_wrap .wp-manga-chapter`).eq(0)[0].children[1]/*Getting 'a' tag*/.attribs.href //Last chapter
+            first() {
+                return $('.listing-chapters_wrap .wp-manga-chapter').eq(-1)[0].children[1]/*Getting 'a' tag*/.attribs.href
             },
-            all: () => {
+            last() {
+                return $(`.listing-chapters_wrap .wp-manga-chapter`).eq(0)[0].children[1]/*Getting 'a' tag*/.attribs.href
+            },
+            all() {
                 return $('.listing-chapters_wrap .wp-manga-chapter').toArray().map(chapter => chapter.children[1]/*Getting 'a' tag*/.attribs.href)
             }
         }
