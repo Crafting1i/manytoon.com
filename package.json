@@ -1,6 +1,6 @@
 {
   "name": "manytoon.com",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simply parser for manytoon.com",
   "homepage": "https://github.com/Crafting1i/manytoon.com",
   "main": "src/index.js",
