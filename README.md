@@ -30,9 +30,6 @@ async function testParser() {
     const simplePage = await parser.getHomepage()
     console.log(simplePage)
 
-    const popularUpdates = await parser.getPopularUpdates()
-    console.log(popularUpdates)
-
     const firstDoujin = simplePage[0]
     console.log(firstDoujin)
 
@@ -91,27 +88,6 @@ testParser()
 > ```
 > 
 > *Returns: [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[Page](##page)\<[Doujin](##doujin)\>>*
-
-> ### **\.getPopularUpdates()**
-> Get the latest popular updates
->
-> | Parameter | Type   | Description | Required |
-> | --------- | ------ | ----------- | -------- |
-> | None      | any    | None        | false    |
->
-> Example:
-> ```js
-> const Manytoon = require('manytoon.com')
-> const parser = new Manytoon.Parser() 
-> 
-> async function logPopular() {
->     const popularUpdates = await parser.getPopularUpdates()
->     console.log(popularUpdates)
-> }
-> logPopular()
-> ```
-> 
-> *Returns:  [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)\<[Doujin](##doujin)\>>*
 
 > ### **\.search(target)**
 > Do search doujins from name
