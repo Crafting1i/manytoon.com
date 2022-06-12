@@ -2,11 +2,6 @@ export = Parser;
 declare class Parser {
     baseURL: string;
     /**
-     * **Get popular doujins**
-     * @returns {Promise<Doujin[]>}
-     */
-    getPopularUpdates(): Promise<Doujin[]>;
-    /**
      * **Get doujins from given page**
      * @return {Promise<Page>}
      */
