@@ -9,7 +9,6 @@
 </p>
 
 > #### Simple parser for [Manytoon](https://manytoon.com).
-> #### Recommended for REST API and Bots
 
 # Installation
 ```bash
