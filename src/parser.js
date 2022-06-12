@@ -11,18 +11,7 @@ const utils = new (require('./utils'))()
 class Parser {
 	constructor() {
 		this.baseURL = 'https://manytoon.com/'
-    }
-    /**
-     * **Get popular doujins**
-     * @returns {Promise<Doujin[]>}
-     */
-    async getPopularUpdates() {
-        const { html } = await utils.getPage(`${this.baseURL}`)
-        const $ = cheerio.load(html)
-
-        const doujins = await utils.parseAllURLsFromElements($('div.popular-slider div.slider__container > div.slider__item .slider__content h4 > a'))
-        return doujins
-    }
+  }
     /**
      * **Get doujins from given page**
      * @return {Promise<Page>}
